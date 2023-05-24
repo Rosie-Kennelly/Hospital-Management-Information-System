@@ -17,8 +17,8 @@ import com.banana.banana.repository.ConsentFormRepository;
 @RequestMapping
 public class BananaController {
 
-    @Autowired()
-    private ConsentFormRepository consentFormRepository;
+    // @Autowired()
+    // private ConsentFormRepository consentFormRepository;
 
     @GetMapping("/ice_cream")
     public String ice_cream() {
@@ -30,13 +30,25 @@ public class BananaController {
         return "consent";
     }
 
-    @PostMapping("/consent/submit-form")
-    public String consentSubmit(@ModelAttribute ConsentForm consentForm) {
-        // save consentForm to database
-        consentForm.setDateSigned(LocalDate.now());
-        consentFormRepository.save(consentForm);
-        // consentForm.save(
-
+    @GetMapping("/success")
+    public String success() {
         return "success";
     }
+
+    @GetMapping("/failure")
+    public String failure() {
+        return "failure";
+    }
+
+
+
+    // @PostMapping("/consent/submit-form")
+    // public String consentSubmit(@ModelAttribute ConsentForm consentForm) {
+    //     // save consentForm to database
+    //     consentForm.setDateSigned(LocalDate.now());
+    //     consentFormRepository.save(consentForm);
+    //     // consentForm.save(
+
+    //     return "success";
+    // }
 }
