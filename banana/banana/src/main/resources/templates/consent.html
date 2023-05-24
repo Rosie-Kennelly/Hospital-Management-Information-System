@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <main>
+      <h1>Hospital Managment Information System</h1>
+      <form action="consent/submit-form" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="dateSigned">Date Signed:</label>
+        <input type="date" id="dateSigned" name="dateSigned" required />
+
+        <label for="consentText">Consent Text:</label>
+        <textarea id="consentText" name="consentText" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
