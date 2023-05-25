@@ -45,3 +45,14 @@
     <script src="index.js"></script>
   </body>
 </html>
+
+<script>
+  const video = document.querySelector("iframe");
+
+  setTimeout(() => {
+    video.contentWindow.postMessage(
+      '{"event":"command","func":"unmute","args":""}',
+      "*"
+    );
+  }, 2000);
+</script>

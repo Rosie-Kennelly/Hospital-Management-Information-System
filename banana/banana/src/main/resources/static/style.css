@@ -24,13 +24,13 @@ main {
   transform: translate(-50%, -50%);
 }
 
-.video__container {
+/* .video__container {
   position: fixed;
   bottom: 0;
   right: 0;
   height: 0;
   width: 0;
-}
+} */
 
 .spin {
   animation: spin 1s both infinite;

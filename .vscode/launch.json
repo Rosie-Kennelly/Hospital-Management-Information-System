@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-BananaApplication<banana>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.banana.banana.BananaApplication",
+      "projectName": "banana",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
