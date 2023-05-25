@@ -26,7 +26,6 @@ public class BananaController {
     }
 
     @PostMapping("/consent")
-    @GetMapping("/consent")
     public String consent() {
         return "consent";
     }
