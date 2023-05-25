@@ -1,9 +1,6 @@
 package com.banana.banana;
 
 import java.time.LocalDate;
-
-import org.springframework.beans.factory.annotation.Autowired;
-// Importing required classes
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -11,14 +8,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.banana.banana.models.ConsentForm;
-import com.banana.banana.repository.ConsentFormRepository;
 
 @Controller
-@RequestMapping
+// @EnableJpaRepositories(basePackages = "com.banana.banana.repository")
+@RequestMapping("/")
 public class BananaController {
 
-    // @Autowired()
-    // private ConsentFormRepository consentFormRepository;
+    private final BananaService bananaService;
+
+    public BananaController(BananaService bananaService) {
+        this.bananaService = bananaService;
+    }
+
 
     @GetMapping("/ice_cream")
     public String ice_cream() {
@@ -30,8 +31,17 @@ public class BananaController {
         return "consent";
     }
 
-    @GetMapping("/success")
-    public String success() {
+    @GetMapping("/")
+    public String index() {
+        return "login";
+    }
+
+    @PostMapping("/consent/submit-form")
+    public String consentSubmit(@ModelAttribute ConsentForm consentForm) {
+
+        consentForm.setDateSigned(LocalDate.now());
+        bananaService.saveConsentForm(consentForm);
+
         return "success";
     }
 
