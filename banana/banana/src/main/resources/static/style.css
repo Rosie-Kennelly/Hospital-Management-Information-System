@@ -17,6 +17,12 @@ main {
   flex-direction: column;
 }
 
+.content_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .icon__container {
   position: fixed;
   top: 50%;
@@ -56,9 +62,13 @@ main {
 .form_container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
+  /* justify-content: center;
+  align-items: center; */
+  margin: 40px 40px 80px 40px;
+  padding: 75px 80px 25px 80px;
+  background-color: rgb(236, 234, 231);
+  width: 50%;
+  border-radius: 2em;
 }
 
 form {
@@ -78,7 +88,7 @@ textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 100%;
+  width: 70%;
   box-sizing: border-box;
   margin-bottom: 10px;
 }
@@ -90,6 +100,8 @@ button[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  float: right;
+  width: 40px;
 }
 
 button[type="submit"]:hover {
@@ -100,8 +112,7 @@ button[type="submit"]:hover {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 100%;
+  width: 70%;
   box-sizing: border-box;
   margin-bottom: 10px;
-
 }

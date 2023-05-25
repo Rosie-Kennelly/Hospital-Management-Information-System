@@ -14,22 +14,24 @@
       <div class="nav_bar">
         <h1>Hospital Managment Information System</h1>
       </div>
-      <div class="form_container">
-        <form action="consent/submit-form" method="post">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+      <div class="content_container">
+        <div class="form_container">
+          <form action="consent/submit-form" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
 
-          <label for="dateSigned">Date Signed:</label>
-          <input type="date" id="dateSigned" name="dateSigned" required />
+            <label for="dateSigned">Date Signed:</label>
+            <input type="date" id="dateSigned" name="dateSigned" required />
 
-          <label for="consentText">Consent Text:</label>
-          <textarea id="consentText" name="consentText" required></textarea>
+            <label for="consentText">Consent Text:</label>
+            <textarea id="consentText" name="consentText" required></textarea>
 
-          <button type="submit">Submit</button>
-        </div> 
+            <button type="submit">Submit</button>
+          </div> 
+        </div>
       </form>
     </main>
     <script src="index.js"></script>
