@@ -2,13 +2,13 @@
 
 html,
 body {
-  font-family: "Poppins", sans-serif;
   padding: 0px;
   margin: 0px;
+  font-family: "Poppins", sans-serif;
+  background: url("icecream_background.svg") repeat;
+  background-position: 0px 50px;
 }
-
 h1 {
-  color: #343434;
   letter-spacing: 0.05em;
 }
 
@@ -28,6 +28,11 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.left {
+  flex: 1;
+  width: 100%;
 }
 
 /* .video__container {
@@ -51,29 +56,36 @@ main {
   }
 }
 
-/* Add this code to your CSS file */
-
+.image_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 300px; /* add this line */
+  width: 100%;
+}
 .nav_bar {
-  background-color: rgb(137, 183, 183);
+  background-color: #c0e4f9;
+  color: #36424d;
   margin-bottom: 40px;
   padding-left: 20px;
 }
 
 .form_container {
   display: flex;
-  flex-direction: column;
-  /* justify-content: center;
-  align-items: center; */
+  flex-direction: row;
   margin: 40px 40px 80px 40px;
-  padding: 75px 80px 25px 80px;
-  background-color: rgb(236, 234, 231);
-  width: 50%;
+  padding: 80px;
+  background-color: #efefef;
+  width: 75%;
+  max-width: 800px;
   border-radius: 2em;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  margin-right: 40px;
 }
 
 label {
@@ -84,13 +96,14 @@ label {
 
 input[type="text"],
 input[type="email"],
-textarea {
+input[type="password"] textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 70%;
+  width: 100%;
   box-sizing: border-box;
   margin-bottom: 10px;
+  resize: vertical;
 }
 
 button[type="submit"] {
@@ -101,7 +114,7 @@ button[type="submit"] {
   border-radius: 4px;
   cursor: pointer;
   float: right;
-  width: 40px;
+  width: 7rem;
 }
 
 button[type="submit"]:hover {
@@ -112,7 +125,30 @@ button[type="submit"]:hover {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 70%;
   box-sizing: border-box;
   margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 830px) {
+  .form_container {
+    flex-direction: column;
+    margin: 20px;
+    padding: 40px;
+  }
+
+  form {
+    margin-right: 0;
+  }
+
+  .image_container {
+    display: none; /* add this line */
+    margin-bottom: 20px;
+  }
+  .image_container img {
+    display: none;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
 }
