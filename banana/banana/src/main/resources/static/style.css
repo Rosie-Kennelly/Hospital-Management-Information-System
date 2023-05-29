@@ -115,6 +115,7 @@ button[type="submit"] {
   cursor: pointer;
   float: right;
   width: 7rem;
+
 }
 
 button[type="submit"]:hover {
