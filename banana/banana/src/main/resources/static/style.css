@@ -7,6 +7,7 @@ body {
   font-family: "Poppins", sans-serif;
   background: url("icecream_background.svg") repeat;
   background-position: 0px 50px;
+  background-color: #ecc1cd;
 }
 h1 {
   letter-spacing: 0.05em;
@@ -59,13 +60,20 @@ main {
 
 .form_container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: 40px 40px 80px 40px;
   padding: 80px;
-  background-color: #efefef;
+  background-color: #f8e1e7;
   width: 75%;
-  max-width: 800px;
+  /* max-width: 800px; */
   border-radius: 2em;
+}
+
+.form_input {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 10%;
 }
 
 form {
@@ -92,6 +100,11 @@ input[type="password"] textarea {
   resize: vertical;
 }
 
+#button_container {
+  display: flex;
+  justify-content: flex-end;
+}
+
 button[type="submit"] {
   background-color: #549979;
   color: white;
@@ -99,9 +112,7 @@ button[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  float: right;
   width: 7rem;
-
 }
 
 button[type="submit"]:hover {
