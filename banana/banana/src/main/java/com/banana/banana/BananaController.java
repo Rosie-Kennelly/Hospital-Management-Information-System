@@ -54,6 +54,11 @@ public class BananaController {
         return "failure";
     }
 
+    @GetMapping("/terms")
+    public String terms() {
+        return "terms";
+    }
+
     // @PostMapping("/consent/submit-form")
     // public String consentSubmit(@ModelAttribute ConsentForm consentForm) {
     // // save consentForm to database
