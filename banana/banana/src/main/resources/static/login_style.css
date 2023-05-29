@@ -17,10 +17,10 @@ form {
   min-width: 200px;
   box-sizing: border-box;
   width: 45%;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff2f5;
+  padding: 30px;
+  border-radius: 2em;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
 }
 
 
@@ -55,7 +55,7 @@ input {
 }
 
 input[type="submit"] {
-  background-color: #4caf50;
+  background-color: #549979;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -65,7 +65,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #3e8e41;
+  background-color: #41775e;
 }
 
 @media only screen and (max-width: 830px) {
