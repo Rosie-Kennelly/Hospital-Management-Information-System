@@ -50,6 +50,11 @@ public class BananaController {
         return "failure";
     }
 
+    @GetMapping("/terms")
+    public String terms() {
+        return "ice_cream";
+    }
+
 
 
     // @PostMapping("/consent/submit-form")

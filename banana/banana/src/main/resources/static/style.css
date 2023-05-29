@@ -94,18 +94,18 @@ textarea {
 }
 
 button[type="submit"] {
-  background-color: #4caf50;
+  background-color: #549979;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   float: right;
-  width: 4git s0px;
+  width: 100px;
 }
 
 button[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #41775e;
 }
 
 #dateSigned {
