@@ -152,4 +152,29 @@ button[type="submit"]:hover {
   button[type="submit"] {
     width: 100%;
   }
+
+progress {
+  width: 100%;
+  height: 30px;
+  background-color: rgba(16, 249, 16, 0.967);
+  border-radius: 5px;
 }
+
+#progressBar {
+  width: 100%;
+  height: 30px;
+  background-color: #891212;
+  border-radius: 5px;
+}
+#progressBar::-webkit-progress-bar {
+  background-color: rgba(16, 249, 16, 0.967);
+  border-radius: 5px;
+}
+#progressBar::-webkit-progress-value {
+  background-color: #891212;
+  border-radius: 5px;
+}
+
+}
+
+
