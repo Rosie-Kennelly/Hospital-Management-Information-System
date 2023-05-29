@@ -107,7 +107,7 @@ input[type="password"] textarea {
 }
 
 button[type="submit"] {
-  background-color: #4caf50;
+  background-color: #549979;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -115,10 +115,11 @@ button[type="submit"] {
   cursor: pointer;
   float: right;
   width: 7rem;
+
 }
 
 button[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #41775e;
 }
 
 #dateSigned {
