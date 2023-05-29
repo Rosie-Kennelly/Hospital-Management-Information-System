@@ -152,19 +152,19 @@ button[type="submit"]:hover {
     width: 100%;
   }
 
-  .progress{
-    position:relative
-    width:210px;
-    height:30px;
-    background:#9cbab4; 
-    border-radius:5px; 
-    overflow:hidden; 
-    
+  .progress {
+    position: relative;
+    width: 210px;
+    height: 30px;
+    background: #9cbab4;
+    border-radius: 5px;
+    overflow: hidden;
   }
   .progress__fill{
     width:0%;
     height: 100%;
     background: #0eb7d1;
+    transition: width 0.3s ease-in-out;
   }
 
   .progress__text{

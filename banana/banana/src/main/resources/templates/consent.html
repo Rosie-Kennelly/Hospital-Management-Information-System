@@ -35,10 +35,26 @@
                 <span class="progress__text">0%</span>
               </div>
               <script> 
-              function updateProgressBar(progressBar, value){
-                progressBar.querySelector('.progress__fill').style.width = `${value}%`;
-                progressBar.querySelector('.progress__text').textContent = `${value}%`;
 
+              const checkbox1 = document.getElementById('consentGiven1');
+              const checkbox2 = document.getElementById('consentGiven2');
+              const progressBar = document.querySelector('.progress__fill');
+              const progressText = document.querySelector('.progress__text');
+
+              checkbox1.addEventListener('change', updateProgressBar);
+              checkbox2.addEventListener('change', updateProgressBar);
+
+              function updateProgressBar(){
+                let progressValue = 0;
+
+                if (checkbox1.checked && checkbox2.checked) {
+                  progressValue = 100;
+                }
+                else if (checkbox1.checked || checkbox1.checked) {
+                  progressValue = 50;
+                }
+              progressBar.style.width = `${progressValue}%`;
+              progressText.textContent = `${progressValue}%`;
               }
               </script>
             </form>
