@@ -20,13 +20,12 @@ public class BananaController {
         this.bananaService = bananaService;
     }
 
-
     @GetMapping("/ice_cream")
     public String ice_cream() {
         return "ice_cream";
     }
 
-    @GetMapping("/consent")
+    @PostMapping("/consent")
     public String consent() {
         return "consent";
     }
@@ -45,20 +44,23 @@ public class BananaController {
         return "success";
     }
 
+    @PostMapping("/auth")
+    public String auth() {
+        return "redirect:/consent";
+    }
+
     @GetMapping("/failure")
     public String failure() {
         return "failure";
     }
 
-
-
     // @PostMapping("/consent/submit-form")
     // public String consentSubmit(@ModelAttribute ConsentForm consentForm) {
-    //     // save consentForm to database
-    //     consentForm.setDateSigned(LocalDate.now());
-    //     consentFormRepository.save(consentForm);
-    //     // consentForm.save(
+    // // save consentForm to database
+    // consentForm.setDateSigned(LocalDate.now());
+    // consentFormRepository.save(consentForm);
+    // // consentForm.save(
 
-    //     return "success";
+    // return "success";
     // }
 }
