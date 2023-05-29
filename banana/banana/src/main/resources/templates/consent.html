@@ -11,13 +11,10 @@
   </head>
   <body>
     <main>
-      <!-- <div class="nav_bar">
-        <h1>Hospital Managment Information System</h1>
-      </div> -->
       <div class="content_container">
         <div class="form_container">
           <div class="left">
-            <h2>Consent Form</h2>
+            <h2>Consent Form</h2> 
             <form action="consent/submit-form" method="post">
               <label for="name">Name:</label>
               <input type="text" id="name" name="name" required />
@@ -25,10 +22,10 @@
               <label for="dateSigned">Date Signed:</label>
               <input type="date" id="dateSigned" name="dateSigned" required />
 
-              <label for="consentText">Consent Text:</label>
-              <textarea id="consentText" name="consentText" readonly placeholder="blah blah blah" required></textarea>
+              <label for="consentText">Procedure:</label>
+              <textarea id="consentText" name="consentText" readonly placeholder="Laparoscopic cholecystectomy is a minimally invasive surgical procedure used to remove the gallbladder. It involves making small incisions in the abdomen, through which a laparoscope (a thin, lighted tube with a camera) and specialized surgical tools are inserted. The surgeon navigates the instruments to the gallbladder, which is then carefully detached from the liver and removed. The procedure offers benefits such as shorter recovery time, reduced pain, and minimal scarring compared to traditional open surgery." required></textarea>
 
-              <p>I agree to the <a href="#">Terms of Service</a>:<input type="checkbox" id="consentGiven" name="consentGiven" required />
+              <p>I agree to the <a href="terms.html" target="_blank">Terms & Conditions</a>:<input type="checkbox" id="consentGiven" name="consentGiven" required />
               </p>  
               <p>I consent to the specified procedure:<input type="checkbox" id="consentGiven" name="consentGiven" required />
               </p> 
