@@ -8,14 +8,18 @@ body {
   background-position: 0px 50px;
   background-color: #ecc1cd;
 }
+
+
 h1 {
   letter-spacing: 0.05em;
 }
+
 
 main {
   display: flex;
   flex-direction: column;
 }
+
 
 .content_container {
   display: flex;
@@ -23,39 +27,13 @@ main {
   align-items: center;
 }
 
-/* .icon__container {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
-
-/* .left {
-  flex: 1;
-  width: 100%;
-}
-
-
-.spin {
-  animation: spin 1s both infinite;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-*/
 .nav_bar {
   background-color: #c0e4f9;
   color: #36424d;
   margin-bottom: 40px;
   padding-left: 20px;
 }
+
 
 .form_container {
   display: flex;
@@ -64,9 +42,9 @@ main {
   padding: 80px;
   background-color: #f8e1e7;
   width: 75%;
-  /* max-width: 800px; */
   border-radius: 2em;
 }
+
 
 .form_input {
   display: flex;
@@ -75,17 +53,20 @@ main {
   margin-left: 10%;
 }
 
+
 form {
   display: flex;
   flex-direction: column;
   margin-right: 40px;
 }
 
+
 label {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
+
 
 input[type="text"],
 input[type="email"],
@@ -99,10 +80,12 @@ input[type="password"] textarea {
   resize: vertical;
 }
 
+
 #button_container {
   display: flex;
   justify-content: flex-end;
 }
+
 
 button[type="submit"] {
   background-color: #549979;
@@ -114,9 +97,11 @@ button[type="submit"] {
   width: 7rem;
 }
 
+
 button[type="submit"]:hover {
   background-color: #41775e;
 }
+
 
 #dateSigned {
   padding: 10px;
@@ -126,6 +111,7 @@ button[type="submit"]:hover {
   margin-bottom: 10px;
 }
 
+
 @media only screen and (max-width: 830px) {
   .form_container {
     flex-direction: column;
@@ -133,21 +119,16 @@ button[type="submit"]:hover {
     padding: 40px;
   }
 
+
   form {
     margin-right: 0;
   }
 
-  /* .image_container {
-    display: none; /* add this line */
-    /* margin-bottom: 20px;
-  }
-  .image_container img {
-    display: none;
-  } */ 
 
   button[type="submit"] {
     width: 100%;
   }
+
 
 progress {
   width: 100%;
@@ -162,10 +143,14 @@ progress {
   background-color: #891212;
   border-radius: 5px;
 }
+
+
 #progressBar::-webkit-progress-bar {
   background-color: rgba(16, 249, 16, 0.967);
   border-radius: 5px;
 }
+
+
 #progressBar::-webkit-progress-value {
   background-color: #891212;
   border-radius: 5px;

@@ -3,6 +3,8 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: #ecc1cd;
+  padding: 0px;
+  margin: 0px;
 }
 
 h2 {
@@ -20,6 +22,17 @@ form {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+
+.nav_bar {
+  background-color: #8f4157;
+  color: #f5d2dc;
+  margin-bottom: 80px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+  padding-left: 6%;
+}
+
 
 .login_register_container {
   display: flex;
