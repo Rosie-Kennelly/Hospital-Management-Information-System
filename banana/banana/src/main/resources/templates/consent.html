@@ -5,33 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="css/styles.css" rel="stylesheet" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>My Website</title>
+    <title>HMIS</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <main>
-      <div class="nav_bar">
-        <h1>Hospital Managment Information System</h1>
-      </div>
       <div class="content_container">
         <div class="form_container">
           <div class="left">
+            <h2>Consent Form</h2> 
             <form action="consent/submit-form" method="post">
               <label for="name">Name:</label>
               <input type="text" id="name" name="name" required />
 
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required />
-
               <label for="dateSigned">Date Signed:</label>
               <input type="date" id="dateSigned" name="dateSigned" required />
 
-              <label for="consentText">Consent Text:</label>
-              <textarea id="consentText" name="consentText" required></textarea>
+              <label for="consentText">Procedure:</label>
+              <textarea id="consentText" name="consentText" readonly placeholder="Laparoscopic cholecystectomy is a minimally invasive surgical procedure used to remove the gallbladder. It involves making small incisions in the abdomen, through which a laparoscope (a thin, lighted tube with a camera) and specialized surgical tools are inserted. The surgeon navigates the instruments to the gallbladder, which is then carefully detached from the liver and removed. The procedure offers benefits such as shorter recovery time, reduced pain, and minimal scarring compared to traditional open surgery." required></textarea>
 
-              <p>I agree to the <a href="#">Terms of Service</a>:<input type="checkbox" id="consentGiven" name="consentGiven" required />
+              <p>I agree to the <a href="terms.html" target="_blank">Terms & Conditions</a>:<input type="checkbox" id="consentGiven1" name="termsAccepted" required />
               </p>  
+              <p>I consent to the specified procedure:<input type="checkbox" id="consentGiven2" name="consentGiven" required />
+              </p> 
               <button type="submit">Submit</button>
             </form>
           </div>
@@ -41,7 +38,32 @@
           </div></div>
         </div>
       </div>
-    </main>
+
     <script src="index.js"></script>
+    <script> 
+    const checkbox1 = document.getElementById('consentGiven1');
+    const checkbox2 = document.getElementById('consentGiven2');
+    const progressBar = document.getElementById('progress');
+    progressBar.id = 'progressBar';
+    progressBar.value = 0;
+    progressBar.max = 2; 
+    document.body.appendChild(progressBar);
+
+    checkbox1.addEventListener('change', updateProgressBar);
+    checkbox2.addEventListener('change', updateProgressBar);
+
+    function updateProgressBar(){
+      let progressValue = 0;
+
+      if(checkbox1.checked){
+        progressValue++;
+      }
+      if(checkbox2.checked){
+        progressValue++;
+      }
+      progressBar.value = progressValue;
+    }
+    </script>
+   </main>
   </body>
 </html>
