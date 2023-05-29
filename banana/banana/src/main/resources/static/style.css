@@ -162,7 +162,7 @@ button[type="submit"]:hover {
     
   }
   .progress__fill{
-    width:50%;
+    width:0%;
     height: 100%;
     background: #0eb7d1;
   }
