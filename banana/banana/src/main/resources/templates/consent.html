@@ -13,7 +13,11 @@
     <main>
       <div class="content_container">
         <div class="form_container">
+<<<<<<< HEAD
           <div class="form_input">
+=======
+          <div class="left">  
+>>>>>>> 6546d8646035be9d783bb00fd2e9d5d3abcee554
             <h2>Consent Form</h2> 
             <form action="consent/submit-form" method="post">
               <label for="name">Name:</label>
@@ -25,12 +29,22 @@
               <label for="consentText">Procedure:</label>
               <textarea id="consentText" name="consentText" readonly placeholder="Laparoscopic cholecystectomy is a minimally invasive surgical procedure used to remove the gallbladder. It involves making small incisions in the abdomen, through which a laparoscope (a thin, lighted tube with a camera) and specialized surgical tools are inserted. The surgeon navigates the instruments to the gallbladder, which is then carefully detached from the liver and removed. The procedure offers benefits such as shorter recovery time, reduced pain, and minimal scarring compared to traditional open surgery." required></textarea>
 
-              <p>I agree to the <a th:href="@{terms}" target="_blank">Terms & Conditions</a>:<input type="checkbox" id="consentGiven1" name="termsAccepted" required /></p>  
-              <p>I consent to the specified procedure:<input type="checkbox" id="consentGiven2" name="consentGiven" required /></p> 
-          </div>
-              <div id = button_container>
-                <button type="submit">Submit</button>
-      
+              <p>I agree to the <a th:href="@{terms}" target="_blank">Terms & Conditions</a>:<input type="checkbox" id="consentGiven1" name="termsAccepted" required />
+              </p>  
+              <p>I consent to the specified procedure:<input type="checkbox" id="consentGiven2" name="consentGiven" required />
+              </p> 
+              <button type="submit">Submit</button>
+              <div class="progress">
+                <div class="progress__fill"></div>
+                <span class="progress__text">0%</span>
+              </div>
+              <script> 
+              function updateProgressBar(progressBar, value){
+                progressBar.querySelector('.progress__fill').style.width = `${value}%`;
+                progressBar.querySelector('.progress__text').textContent = `${value}%`;
+
+              }
+              </script>
             </form>
           </div>
         </div>
@@ -39,10 +53,10 @@
     const checkbox1 = document.getElementById('consentGiven1');
     const checkbox2 = document.getElementById('consentGiven2');
     const progressBar = document.getElementById('progress');
-    progressBar.id = 'progressBar';
+    progressBar.id = 'progress';
     progressBar.value = 0;
     progressBar.max = 2; 
-    document.body.appendChild(progressBar);
+    document.body.appendChild(progress);
 
     checkbox1.addEventListener('change', updateProgressBar);
     checkbox2.addEventListener('change', updateProgressBar);
@@ -58,7 +72,7 @@
       }
       progressBar.value = progressValue;
     }
-    </script>
+    </script> -->
    </main>
   </body>
 </html>

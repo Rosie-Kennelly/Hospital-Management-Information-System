@@ -2,8 +2,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: url("icecream_background.svg") repeat;
-  background-position: 50px 50px;
+  background-color: #ecc1cd;
 }
 
 h2 {
