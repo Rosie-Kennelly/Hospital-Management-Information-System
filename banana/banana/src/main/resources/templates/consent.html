@@ -13,7 +13,7 @@
     <main>
       <div class="content_container">
         <div class="form_container">
-          <div class="left">
+          <div class="left">  
             <h2>Consent Form</h2> 
             <form action="consent/submit-form" method="post">
               <label for="name">Name:</label>
@@ -30,24 +30,32 @@
               <p>I consent to the specified procedure:<input type="checkbox" id="consentGiven2" name="consentGiven" required />
               </p> 
               <button type="submit">Submit</button>
+              <div class="progress">
+                <div class="progress__fill"></div>
+                <span class="progress__text">0%</span>
+              </div>
+              <script> 
+              function updateProgressBar(progressBar, value){
+                progressBar.querySelector('.progress__fill').style.width = `${value}%`;
+                progressBar.querySelector('.progress__text').textContent = `${value}%`;
+
+              }
+              </script>
             </form>
           </div>
-          <div class="right"><div class="image_container"> 
-            <image src="icecream_abstract.png" alt="abstract icecream cone next to computer" width="350">
-
           </div></div>
         </div>
       </div>
 
     <script src="index.js"></script>
-    <script> 
+    <!-- <script> 
     const checkbox1 = document.getElementById('consentGiven1');
     const checkbox2 = document.getElementById('consentGiven2');
     const progressBar = document.getElementById('progress');
-    progressBar.id = 'progressBar';
+    progressBar.id = 'progress';
     progressBar.value = 0;
     progressBar.max = 2; 
-    document.body.appendChild(progressBar);
+    document.body.appendChild(progress);
 
     checkbox1.addEventListener('change', updateProgressBar);
     checkbox2.addEventListener('change', updateProgressBar);
@@ -63,7 +71,7 @@
       }
       progressBar.value = progressValue;
     }
-    </script>
+    </script> -->
    </main>
   </body>
 </html>
