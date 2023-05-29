@@ -3,6 +3,8 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: #ecc1cd;
+  padding: 0px;
+  margin: 0px;
 }
 
 h2 {
@@ -15,11 +17,22 @@ form {
   min-width: 200px;
   box-sizing: border-box;
   width: 45%;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff2f5;
+  padding: 30px;
+  border-radius: 2em;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
 }
+
+
+.nav_bar {
+  background-color: #8f4157;
+  color: #f5d2dc;
+  margin-bottom: 80px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+  padding-left: 6%;
+}
+
 
 .login_register_container {
   display: flex;
@@ -42,7 +55,7 @@ input {
 }
 
 input[type="submit"] {
-  background-color: #4caf50;
+  background-color: #549979;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -52,7 +65,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #3e8e41;
+  background-color: #41775e;
 }
 
 @media only screen and (max-width: 830px) {
